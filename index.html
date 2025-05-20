@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog Card Component</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Figtree:wght@500;800&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --yellow: hsl(47, 88%, 63%);
+        --white: hsl(0, 0%, 100%);
+        --gray-500: hsl(0, 0%, 42%);
+        --gray-950: hsl(0, 0%, 7%);
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Figtree", sans-serif;
+        font-weight: 500;
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--yellow);
+        padding: 1.5rem;
+      }
+
+      .card {
+        background-color: var(--white);
+        max-width: 384px;
+        width: 100%;
+        border-radius: 20px;
+        overflow: hidden;
+        box-shadow: 8px 8px 0 rgba(0, 0, 0, 0.9);
+        transition: transform 0.3s ease;
+      }
+
+      .card:hover {
+        transform: translateY(-16px);
+      }
+
+      .card__illustration {
+        position: relative;
+        width: 100%;
+        padding: 1.5rem 1.5rem 0;
+      }
+
+      .card__illustration-inner {
+        width: 100%;
+        height: 0;
+        padding-bottom: 55%;
+        background-color: var(--yellow);
+        border-radius: 16px;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .card__illustration-img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .card__content {
+        padding: 1.5rem;
+      }
+
+      .card__tag {
+        display: inline-block;
+        background-color: var(--yellow);
+        padding: 0.25rem 0.75rem;
+        border-radius: 4px;
+        font-weight: 800;
+        font-size: 0.875rem;
+        margin-bottom: 1rem;
+      }
+
+      .card__date {
+        color: var(--gray-500);
+        font-size: 0.875rem;
+        margin-bottom: 1rem;
+      }
+
+      .card__title {
+        color: var(--gray-950);
+        font-weight: 800;
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+      }
+
+      .card__description {
+        color: var(--gray-500);
+        font-size: 1rem;
+        line-height: 1.5;
+        margin-bottom: 1.5rem;
+      }
+
+      .card__author {
+        display: flex;
+        align-items: center;
+        margin-top: 1rem;
+      }
+
+      .author__image {
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        margin-right: 0.75rem;
+      }
+
+      .author__name {
+        font-weight: 800;
+        color: var(--gray-950);
+      }
+
+      @media (max-width: 375px) {
+        .card {
+          max-width: 100%;
+        }
+
+        .card__content {
+          padding: 1.25rem;
+        }
+
+        .card__title {
+          font-size: 1.25rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <div class="card__illustration">
+        <div class="card__illustration-inner">
+          <img
+            src="./assets/images/illustration-article.svg"
+            alt="Blog illustration"
+            class="card__illustration-img"
+          />
+        </div>
+      </div>
+
+      <div class="card__content">
+        <div class="card__tag">Learning</div>
+        <div class="card__date">Published 21 Dec 2023</div>
+        <h2 class="card__title">HTML & CSS foundations</h2>
+        <p class="card__description">
+          These languages are the backbone of every website, defining structure,
+          content, and presentation.
+        </p>
+        <div class="card__author">
+          <img
+            src="./assets/images/image-avatar.webp"
+            alt="Greg Hooper"
+            class="author__image"
+          />
+          <span class="author__name">Greg Hooper</span>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
