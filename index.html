@@ -29,6 +29,7 @@
         font-weight: 500;
         min-height: 100vh;
         display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
         background-color: var(--yellow);
@@ -125,7 +126,15 @@
         font-weight: 800;
         color: var(--gray-950);
       }
-
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+        text-align: center;
+        margin-top: 10px;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
       @media (max-width: 375px) {
         .card {
           max-width: 100%;
@@ -170,6 +179,16 @@
           <span class="author__name">Greg Hooper</span>
         </div>
       </div>
+    </div>
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by
+      <a href="https://github.com/sakshi123kakde/" target="_blank"
+        >Sakshi Kakde</a
+      >.
     </div>
   </body>
 </html>
